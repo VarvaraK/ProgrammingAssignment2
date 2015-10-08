@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Summary: Functions for Caching the Inverse of a Matrix
 
-## Write a short comment describing this function
+## makeCacheMatrix function creates a special "matrix" object that can cache its inverse.
+## cacheSolve function computes the inverse of the special "matrix" returned 
+## by makeCacheMatrix above. 
 
 makeCacheMatrix = function(X = matrix()){
   I = NULL
@@ -20,7 +21,10 @@ makeCacheMatrix = function(X = matrix()){
 }
 
 
-## Write a short comment describing this function
+## cacheSolve function computes the inverse of the special "matrix" returned 
+## by makeCacheMatrix above. If the inverse has already been calculated 
+## (and the matrix has not changed), then the cachesolve should retrieve 
+## the inverse from the cache.
 
 cacheSolve = function(X, ...){
   I = X$getinv()  # check if the inverse has already been computed. 
